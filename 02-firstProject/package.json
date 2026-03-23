@@ -1,0 +1,12 @@
+{
+  "name": "02-firstproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"ola mundo\" && exit 1"
+  },
+  "keywords": [],
+  "author": "augustus rossi",
+  "license": "ISC",
+  "description": ""
+}
