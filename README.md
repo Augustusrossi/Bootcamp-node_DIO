@@ -1,2 +1,2 @@
-# Bootcamp-node---DIO-
-Bootcamp com foto no desenvolvimento com Node.js.
+# Bootcamp-node - DIO
+Bootcamp com foco no desenvolvimento com Node.js.
