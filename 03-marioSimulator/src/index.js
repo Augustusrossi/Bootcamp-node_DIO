@@ -98,13 +98,14 @@ async function startRaces(person1, person2) {
 
 
             //Uso do if ternário
-            person2.pontos =- powerResult1 > powerResult2  &&  person2.pontos > 0 ? 1 && console.log(`${person1.nome} ganhou do ${person2.nome}`) 
+            person2.pontos =- powerResult1 > powerResult2  &&  person2.pontos > 0 ? 1 && console.log(`${person1.nome} ganhou do ${person2.nome}`) && console.log(`${person2.nome} Marcou um ponto!`)  
              : 0;
 
             //Uso do if com mais de uma condição
             if (powerResult1 < powerResult2  &&  person1.pontos) {
                 person1.pontos--;
                 console.log(`${person2.nome} ganhou do ${person1.nome}`);
+                console.log(`${person2.nome} Marcou um ponto!`);
             }
             
             console.log(powerResult1 === powerResult2 ? "Confronto Empatado! Sem ganhos ou perdas." : "");
