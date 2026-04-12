@@ -1,0 +1,19 @@
+{
+  "name": "08-npmscripts",
+  "version": "1.0.0",
+  "main": "index.js",
+
+   "_comment": "'myScript: echo hello world && exit 1'",
+   "_comment": "'iniciar': 'node src/index.js && mkdir dist && echo pasta dist criada'",
+
+  "scripts": {
+    "prebuild": "npm install",
+    "start:dev": "node src/index.js",
+    "start:watch": "node --watch src/index.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
