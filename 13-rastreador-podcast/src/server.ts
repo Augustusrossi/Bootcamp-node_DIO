@@ -1,12 +1,25 @@
 import * as http from "http";
 
-import { getListEps } from "./controllers/podcastsController";
+import { getFilterEps, getListEps } from "./controllers/podcastsController";
 
 const server = http.createServer(
     async (request: http.IncomingMessage, response: http.ServerResponse) => {
 
-        if (request.method === "GET" && request.url === "/api/list") {
+
+        //query string
+        //?? = ou
+        const [baseUrl, queryString] = request.url?.split("?") ?? ["", ""]
+
+        // console.log(baseUrl);
+        // console.log(queryString);
+        
+
+        if (request.method === "GET" && baseUrl === "/api/list  ") {
             await getListEps(request, response);
+        }
+
+        if (request.method === "GET" && baseUrl === "/api/episode  ") {
+            await getFilterEps(request, response);
         }
     }
 );
