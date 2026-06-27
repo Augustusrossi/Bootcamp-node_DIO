@@ -1,28 +1,7 @@
 import * as http from "http";
+import { app } from "./app";
 
-import { getFilterEps, getListEps } from "./controllers/podcastsController";
-
-const server = http.createServer(
-    async (request: http.IncomingMessage, response: http.ServerResponse) => {
-
-
-        //query string
-        //?? = ou
-        const [baseUrl, queryString] = request.url?.split("?") ?? ["", ""]
-
-        // console.log(baseUrl);
-        // console.log(queryString);
-        
-
-        if (request.method === "GET" && baseUrl === "/api/list  ") {
-            await getListEps(request, response);
-        }
-
-        if (request.method === "GET" && baseUrl === "/api/episode  ") {
-            await getFilterEps(request, response);
-        }
-    }
-);
+const server = http.createServer(app);
 
 const port = process.env.PORT;
 
